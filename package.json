@@ -1,22 +1,27 @@
 {
-    "name": "dhcpjs",
-    "description": "DHCP client and server APIs",
-    "keywords": [
-        "dhcp", "bootp", "dhclient"
-    ],
-    "version": "0.2.0",
-    "author": "Andrew Paprocki <andrew@ishiboo.com>",
-    "license": "MIT",
-    "homepage": "http://github.com/apaprocki/node-dhcpjs",
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/apaprocki/node-dhcpjs.git"
-    },
-    "dependencies": {
-        "ipv6": "3.1.1"
-    },
-    "engines": {
-        "node": ">=0.10"
-    }
+  "name": "dhcpjs",
+  "description": "DHCP client and server APIs",
+  "keywords": [
+    "dhcp",
+    "bootp",
+    "dhclient"
+  ],
+  "version": "0.2.0",
+  "author": "Andrew Paprocki <andrew@ishiboo.com>",
+  "license": "MIT",
+  "homepage": "http://github.com/apaprocki/node-dhcpjs",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apaprocki/node-dhcpjs.git"
+  },
+  "dependencies": {
+    "ipv6": "3.1.1"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "tap": "^1.3.1"
+  }
 }
