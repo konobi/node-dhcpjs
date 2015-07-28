@@ -99,6 +99,116 @@ and will be made available as seperate modules that can be used in a "plugin" st
    * [5859](https://www.ietf.org/rfc/rfc5859.txt) TFTP Server Address Option
    * [6153](https://www.ietf.org/rfc/rfc6153.txt) Access Network Discovery and Selection Function (ANDSF) Discovery Options
 
+### Breakdown of options vs RFCs
+
+| Option Number | Option Name                      | 1497 | 1533 | 2132 | 3679 | huh? 
+| ------------- | -------------------------------- | ---- | ---- | ---- | ---- | ----
+| 1             | subNetMask                       | ✔    | ✔    | ✔    |      |
+| 2             | timeOffset                       | ✔    | ✔    | ✔    |      |
+| 3             | routers                          | ✔    | ✔    | ✔    |      |
+| 4             | timeServer                       | ✔    | ✔    | ✔    |      |
+| 5             | nameServer                       | ✔    | ✔    | ✔    |      |
+| 6             | dnsServer                        | ✔    | ✔    | ✔    |      |
+| 7             | logServer                        | ✔    | ✔    | ✔    |      |
+| 8             | cookieServer                     | ✔    | ✔    | ✔    |      |
+| 9             | lprServer                        | ✔    | ✔    | ✔    |      |
+| 10            | impressServer                    | ✔    | ✔    | ✔    |      |
+| 11            | rlpServer                        | ✔    | ✔    | ✔    |      |
+| 12            | hostName                         | ✔    | ✔    | ✔    |      |
+| 13            | bootFileSize                     | ✔    | ✔    | ✔    |      |
+| 14            | meritDumpFile                    | ✔    | ✔    | ✔    |      |
+| 15            | domainName                       | ✔    | ✔    | ✔    |      |
+| 16            | swapServer                       | ✔    | ✔    | ✔    |      |
+| 17            | rootPath                         | ✔    | ✔    | ✔    |      |
+| 18            | extensionsPath                   | ✔    | ✔    | ✔    |      |
+| 19            | ipForward                        |      | ✔    | ✔    |      |
+| 20            | nonLocalSourceRouting            |      | ✔    | ✔    |      |
+| 21            | policyFilter                     |      | ✔    | ✔    |      |
+| 22            | maxDatagramReassemlySize         |      | ✔    | ✔    |      |
+| 23            | defaultIpTtl                     |      | ✔    | ✔    |      |
+| 24            | pathMtuTimeout                   |      | ✔    | ✔    |      |
+| 25            | pathMtuPlateauTimeout            |      | ✔    | ✔    |      |
+| 26            | interfaceMTU                     |      | ✔    | ✔    |      |
+| 27            | allSubnetsLocal                  |      | ✔    | ✔    |      |
+| 28            | broadcastAddress                 |      | ✔    | ✔    |      |
+| 29            | performMaskDiscovery             |      | ✔    | ✔    |      |
+| 30            | maskSupplier                     |      | ✔    | ✔    |      |
+| 31            | performRouterDiscovery           |      | ✔    | ✔    |      |
+| 32            | routerSolicitationAddress        |      | ✔    | ✔    |      |
+| 33            | staticRoutes                     |      | ✔    | ✔    |      |
+| 34            | trailerEncapsulation             |      | ✔    | ✔    |      |
+| 35            | arpCacheTimeout                  |      | ✔    | ✔    |      |
+| 36            | ethernetEncapsulation            |      | ✔    | ✔    |      |
+| 37            | tcpDefaultTtl                    |      | ✔    | ✔    |      |
+| 38            | tcpKeepaliveInterval             |      | ✔    | ✔    |      |
+| 39            | tcpKeepaliveGarbage              |      | ✔    | ✔    |      |
+| 40            | nisDomain                        |      | ✔    | ✔    |      |
+| 41            | nisServers                       |      | ✔    | ✔    |      |
+| 42            | ntpServers                       |      | ✔    | ✔    |      |
+| 43            | vendorSpecificInfo               |      | ✔    | ✔    |      |
+| 44            | netbiosTcpIpNameServer           |      | ✔    | ✔    |      |
+| 45            | netbiosTcpIpDatagramDistributionServer |   | ✔ | ✔    |      |
+| 46            | netbiosTcpIpNodeType             |      | ✔    | ✔    |      |
+| 47            | netbiosTcpIpScope                |      | ✔    | ✔    |      |
+| 48            | xWindowSystemFontServer          |      | ✔    | ✔    |      |
+| 49            | xWindowSystemDisplayManager      |      | ✔    | ✔    |      |
+| 50            | requestedIpAddress               |      | ✔    | ✔    |      |
+| 51            | ipAddressLeaseTime               |      | ✔    | ✔    |      |
+| 52            | optionOverload                   |      | ✔    | ✔    |      |
+| 53            | dhcpMessageType                  |      | ✔    | ✔    |      |
+| 54            | serverIdentifier                 |      | ✔    | ✔    |      |
+| 55            | parameterRequestList             |      | ✔    | ✔    |      |
+| 56            | message                          |      | ✔    | ✔    |      |
+| 57            | maxDhcpMessageSize               |      | ✔    | ✔    |      |
+| 58            | renewalTime                      |      | ✔    | ✔    |      |
+| 59            | rebindTime                       |      | ✔    | ✔    |      |
+| 60            | classIdentifier                  |      | ✔    | ✔    |      |
+| 61            | clientIdentifier                 |      | ✔    | ✔    |      |
+| 64            | nisPlusDomain                    |      |      | ✔    |      |
+| 65            | nisPlusServers                   |      |      | ✔    |      |
+| 66            | tftpServer                       |      |      | ✔    |      |
+| 67            | bootFileName                     |      |      | ✔    |      |
+| 68            | mobileIpHomeAgent                |      |      | ✔    |      |
+| 69            | smtpServer                       |      |      | ✔    |      |
+| 70            | popServer                        |      |      | ✔    |      |
+| 71            | nntpServer                       |      |      | ✔    |      |
+| 72            | wwwServer                        |      |      | ✔    |      |
+| 73            | fingerServer                     |      |      | ✔    |      |
+| 74            | ircServer                        |      |      | ✔    |      |
+| 75            | streetTalkServer                 |      |      | ✔    |      |
+| 76            | streetTalkDaServer               |      |      | ✔    |      |
+| 80            | ?                                |      |      |      | ✗    | Service Location Protocol Naming Authority?
+| 83            | ?                                |      |      |      | ✗    | Relay Agent Options
+| 84            | ?                                |      |      |      | ✗    | Relay Agent Options
+| 88            | ?                                |      |      |      | ✗    | IEEE 1003.1 POSIX Timezone
+| 89            | ?                                |      |      |      | ✗    | FQDNs in DHCP Options
+| 91            | ?                                |      |      |      | ✗    | VINES TCP/IP Server
+| 92            | ?                                |      |      |      | ✗    | Server Selection
+| 93            | pxeClientSystem                  |      |      |      | ✔    |
+| 94            | pxeClientNdi                     |      |      |      | ✔    |
+| 95            | ldapServers                      |      |      |      | ✔    |
+| 97            | uuidOrGuidClientIdentifier       |      |      |      | ✔    | 
+| 96            | ?                                |      |      |      | ✗    | IPv6 Transition
+| 99            | ?                                |      |      |      | ✗    | ?
+| 100           | ?                                |      |      |      | ✗    | Printer Name
+| 101           | ?                                |      |      |      | ✗    | Multicast Assignment through DHCP
+| 102           | ?                                |      |      |      | ✗    | ?
+| 103           | ?                                |      |      |      | ✗    | ?
+| 104           | ?                                |      |      |      | ✗    | ?
+| 105           | ?                                |      |      |      | ✗    | ?
+| 106           | ?                                |      |      |      | ✗    | ?
+| 107           | ?                                |      |      |      | ✗    | ?
+| 108           | ?                                |      |      |      | ✗    | Swap Path
+| 109           | ?                                |      |      |      | ✗    | ?
+| 110           | ?                                |      |      |      | ✗    | IPX Compatibility
+| 111           | ?                                |      |      |      | ✗    | ?
+| 112           | netinfoAddress                   |      |      |      | ✔    |
+| 113           | netinfoTag                       |      |      |      | ✔    |
+| 114           | url                              |      |      |      | ✔    | ?
+| 115           | ?                                |      |      |      | ✗    | Failover
+| 126           | ?                                |      |      |      | ✔    | Option Code Extensions
+| 127           | ?                                |      |      |      | ✔    | Option Code Extensions
+
 ### Overhaul, tests and docs
 
 Updated by [Scott "konobi" McWhirter][https://github.com/konobi/]
