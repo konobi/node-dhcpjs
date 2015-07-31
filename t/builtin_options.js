@@ -165,3 +165,22 @@ tap.test('requestedIpAddress option handler', function(t) {
   t.done();
 });
 
+tap.test('dhcpMessageType option handler', function(t) {
+
+  var opt = OPTS.dhcpMessageType;
+  t.type(opt, 'object', 'dhcpMessageType option handler is available');
+  t.equals(opt.optionNumber, 53, 'rdhcpMessageTypeoption number is correct (53)');
+  t.equals(opt.optionPriority, 10, 'dhcpMessageType option priority is correct (50)');
+  t.equals(opt.optionName, 'dhcpMessageType', 'dhcpMessageType option name is correct (dhcpMessageTypes)');
+
+  var test_obj = {};
+  opt.decode(test_obj, new Buffer('01', 'hex'));
+  t.equals(test_obj.dhcpMessageType, 1, 'dhcpMessageType is decoded correctly');
+
+  test_obj = {};
+  opt.encode(test_obj, '4');
+  t.same(test_obj.dhcpMessageType, new Buffer('04', 'hex'), 'dhcpMessageType is encoded correctly');
+
+  t.done();
+});
+
