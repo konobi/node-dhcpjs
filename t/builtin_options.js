@@ -146,3 +146,22 @@ tap.test('domainName option handler', function(t) {
   t.done();
 });
 
+tap.test('requestedIpAddress option handler', function(t) {
+
+  var opt = OPTS.requestedIpAddress;
+  t.type(opt, 'object', 'requestedIpAddress option handler is available');
+  t.equals(opt.optionNumber, 50, 'requestedIpAddress option number is correct (50)');
+  t.equals(opt.optionPriority, 50, 'requestedIpAddress option priority is correct (50)');
+  t.equals(opt.optionName, 'requestedIpAddress', 'requestedIpAddress option name is correct (requestedIpAddress)');
+
+  var test_obj = {};
+  opt.decode(test_obj, new Buffer('01020304', 'hex'));
+  t.equals(test_obj.requestedIpAddress, '1.2.3.4', 'requestedIpAddress is decoded correctly');
+
+  test_obj = {};
+  opt.encode(test_obj, '1.2.3.4');
+  t.same(test_obj.requestedIpAddress, new Buffer('01020304', 'hex'), 'requestedIpAddress is encoded correctly');
+
+  t.done();
+});
+

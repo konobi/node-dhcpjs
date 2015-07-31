@@ -211,5 +211,5 @@ and will be made available as seperate modules that can be used in a "plugin" st
 
 ### Overhaul, tests and docs
 
-Updated by [Scott "konobi" McWhirter][https://github.com/konobi/]
+Updated by [Scott "konobi" McWhirter](https://github.com/konobi/)
 
