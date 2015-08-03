@@ -169,7 +169,7 @@ tap.test('dhcpMessageType option handler', function(t) {
 
   var opt = OPTS.dhcpMessageType;
   t.type(opt, 'object', 'dhcpMessageType option handler is available');
-  t.equals(opt.optionNumber, 53, 'rdhcpMessageTypeoption number is correct (53)');
+  t.equals(opt.optionNumber, 53, 'dhcpMessageType option number is correct (53)');
   t.equals(opt.optionPriority, 10, 'dhcpMessageType option priority is correct (50)');
   t.equals(opt.optionName, 'dhcpMessageType', 'dhcpMessageType option name is correct (dhcpMessageTypes)');
 
@@ -183,4 +183,47 @@ tap.test('dhcpMessageType option handler', function(t) {
 
   t.done();
 });
+
+tap.test('pad and end option handlers are trivial', function(t) {
+  var opt = OPTS.padOption;
+  t.type(opt, 'object', 'pad option handler is available');
+  t.equals(opt.optionNumber, 0, 'pad option number is correct (0)');
+  t.equals(opt.optionPriority, 5, 'pad option priority is correct (5)');
+  t.equals(opt.optionName, 'pad', 'pad option name is correct (pad)');
+
+  t.type(opt.encode, undefined, 'no encode function');
+  t.type(opt.decode, undefined, 'no decode function');
+
+
+  opt = OPTS.endOption;
+  t.type(opt, 'object', 'end option handler is available');
+  t.equals(opt.optionNumber, 255, 'end option number is correct (255)');
+  t.equals(opt.optionPriority, 90, 'end option priority is correct (90)');
+  t.equals(opt.optionName, 'end', 'end option name is correct (end)');
+
+  t.type(opt.encode, undefined, 'no encode function');
+  t.type(opt.decode, undefined, 'no decode function');
+
+  t.done();
+});
+
+tap.test('optionOverload option handler', function(t) {
+  var opt = OPTS.optionOverload;
+
+  t.type(opt, 'object', 'optionOverload option handler is available');
+  t.equals(opt.optionNumber, 52, 'optionOverload option number is correct (52)');
+  t.equals(opt.optionPriority, 50, 'optionOverload option priority is correct (50)');
+  t.equals(opt.optionName, 'optionOverload', 'optionOverload option name is correct (optionOverload)');
+
+  var test_obj = {};
+  opt.decode(test_obj, new Buffer('00', 'hex'));
+  t.equals(test_obj.optionOverload, 0, 'optionOverload is decoded correctly');
+
+  test_obj = {};
+  opt.encode(test_obj, 2);
+  t.same(test_obj.optionOverload, new Buffer('02', 'hex'), 'optionOverload is encoded correctly');
+
+  t.done();
+});
+
 
