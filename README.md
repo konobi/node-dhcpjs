@@ -213,3 +213,11 @@ and will be made available as seperate modules that can be used in a "plugin" st
 
 Updated by [Scott "konobi" McWhirter](https://github.com/konobi/)
 
+### TODO
+
+  * List definite cases for non-core option handlers
+  * Which options should be supported by default
+  * Which RFC to support by default? Should we support more than one?
+  * Improve error case handling in option handlers
+
+

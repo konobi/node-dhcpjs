@@ -17,6 +17,10 @@ tap.test('subNetMask option handler', function(t) {
   opt.encode(test_obj, '255.255.240.0');
   t.same(test_obj.subNetMask, new Buffer('FFFFF000', 'hex'), 'subnetmask is encoded correctly');
 
+  test_obj = {};
+  opt.decode(test_obj, new Buffer(1));
+  t.same(test_obj.subNetMask, undefined, 'subnetmask is decoded correctly when null');
+
   t.done();
 });
 
