@@ -211,6 +211,8 @@ and will be made available as seperate modules that can be used in a "plugin" st
 
 ### External Extensions
 
+As according to http://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml
+
 | Name                             | RFC  | Option numbers
 |----------------------------------|------|----------------
 | netWare                          | 2242 | 62, 63
