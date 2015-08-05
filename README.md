@@ -209,6 +209,52 @@ and will be made available as seperate modules that can be used in a "plugin" st
 | 126           | ?                                |      |      |      | ✔    | Option Code Extensions
 | 127           | ?                                |      |      |      | ✔    | Option Code Extensions
 
+### External Extensions
+
+| Name                             | RFC  | Option numbers
+|----------------------------------|------|----------------
+| netWare                          | 2242 | 62, 63
+| userClass                        | 3004 | 77
+| directoryAgent                   | 2610 | 78, 79
+| rapidCommit                      | 4039 | 80
+| clientFQDN                       | 4702 | 81
+| dhcpRelayAgentInfo               | 3046 | 82
+| iSNS                             | 4174 | 83
+| NDS                              | 2241 | 85, 86, 87
+| BCMCS                            | 4280 | 88, 89
+| Authentication                   | 3118 | 90
+| client-last-transaction-time     | 4388 | 91, 92
+| PXE                              | 4578 | 93, 94, 97, 128, 129, 130, 131, 132, 133, 134, 135
+| User-Auth                        | 2485 | 98
+| GEOCONF\_CIVIC                   | 4776 | 99
+| timeZone                         | 4833 | 100, 101
+| autoConfig                       | 2563 | 116
+| nameServiceSearch                | 2937 | 117
+| subnetSelectionOption            | 3011 | 118
+| domainSearch                     | 3397 | 119
+| sipServers                       | 3361 | 120
+| classlessStaticRoute             | 3442 | 33 (deprecated), 121
+| cableLabsClientConfiguration     | 3495 | 122
+| geoConf                          | 6225 | 123, 144
+| vendor                           | 3925 | 124, 125
+| OPTION\_PANA\_AGENT              | 5192 | 136
+| OPTION\_V4\_LOST                 | 5223 | 137
+| OPTION\_CAPWAP\_AC\_V4           | 5417 | 138
+| OPTION-IPv4                      | 5678 | 139, 140
+| sipUserAgentConfiguration        | 6011 | 141
+| OPTION-IPv4\_Address-ANDSF       | 6153 | 142
+| FORCERENEW\_NONCE\_CAPABLE       | 6704 | 145
+| rdnssSelection                   | 6731 | 146
+| tftpServerAddress                | 5859 | 150, 66
+| leaseQuery                       | 6926 | 151, 152, 153, 154, 155, 156, 157
+| OPTION\_V4\_PCP\_SERVER          | 7291 | 158
+| OPTION\_V4\_PORTPARAMS           | draft-ietf-dhc-dynamic-shared-v4allocation-09 | 159
+| PXELINUX                         | 5071 | 208, 209, 210, 211
+| OPTION\_6RD                      | 5969 | 212
+| OPTION\_V4\_ACCESS\_DOMAIN       | 5986 | 213
+| subnetAllocationOption           | 6656 | 220
+| virtualSubnetSelection           | 6607 | 221
+
 ### Overhaul, tests and docs
 
 Updated by [Scott "konobi" McWhirter](https://github.com/konobi/)
