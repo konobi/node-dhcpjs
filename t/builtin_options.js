@@ -89,6 +89,35 @@ tap.test('timeServers option handler', function(t) {
   t.done();
 });
 
+tap.test('nameServers option handler', function(t) {
+
+  var opt = OPTS.nameServers;
+  t.type(opt, 'object', 'nameServers option handler is available');
+  t.equals(opt.optionNumber, 5, 'nameServers option number is correct (5)');
+  t.equals(opt.optionPriority, 50, 'nameServers option priority is correct (50)');
+  t.equals(opt.optionName, 'nameServers', 'nameServers option name is correct (nameServers)');
+  
+  var test_obj = {};
+  opt.decode(test_obj, new Buffer('01010101', 'hex'));
+  t.same(test_obj.nameServers, ['1.1.1.1'], 'nameServers is decoded correctly');
+  
+  test_obj = {};
+  opt.encode(test_obj, ['2.2.2.1']);
+  t.same(test_obj.nameServers, new Buffer('02020201', 'hex'), 'nameServers is encoded correctly');
+
+  opt.decode(test_obj, new Buffer('0101010102020201', 'hex'));
+  t.same(test_obj.nameServers, ['1.1.1.1', '2.2.2.1'], 'nameServers is decoded correctly (multiple)');
+
+  opt.encode(test_obj, ['1.1.1.1', '2.2.2.1']);
+  t.same(test_obj.nameServers, new Buffer('0101010102020201', 'hex'), 'nameServers is encoded correctly (multiple)');
+
+  test_obj = {};
+  opt.decode(test_obj, new Buffer(1));
+  t.same(test_obj.nameServers, undefined, 'nameServer is decoded correctly when null');
+
+  t.done();
+});
+
 tap.test('domainNameServers option handler', function(t) {
   
   var opt = OPTS.domainNameServers;
