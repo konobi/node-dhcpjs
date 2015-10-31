@@ -1,5 +1,6 @@
 var tap = require('tap');
 var OPTS = require("../lib/options");
+var OPTS = new OPTS(); 
 
 tap.test('subNetMask option handler', function(t) {
 
